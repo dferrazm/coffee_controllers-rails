@@ -1,0 +1,14 @@
+PATH
+  remote: .
+  specs:
+    coffee_controllers-rails (0.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  coffee_controllers-rails!
