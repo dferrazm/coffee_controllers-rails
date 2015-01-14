@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = CoffeeControllers::Rails::VERSION
   s.authors     = ["Daniel Ferraz"]
   s.email       = ["d.ferrazm@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO"
-  s.description = "TODO"
+  s.homepage    = "http://github.com/imaboldcompany/coffee_controllers-rails"
+  s.summary     = %q{Your controller's actions specific coffee scripts}
+  s.description = %q{Execute client scripts (written in Coffee) that are specific to the controller's action being executed at the moment.}
   s.license     = "MIT"
 
   s.add_dependency "coffee-rails"
