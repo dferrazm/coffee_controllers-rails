@@ -27,6 +27,12 @@ The gem also depends of `jQuery` to work properly. Either use [jquery-rails](htt
 
 ## Setup
 
+In your `application.js` file, add:
+
+```javascript
+//= require coffee_controllers/main
+```
+
 In your views layout file, say `application.html.erb`, add this to the `body` tag:
 
 ```html
