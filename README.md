@@ -40,7 +40,7 @@ In your views layout file, say `application.html.erb`, add this to the `body` ta
       data-action="<%= controller.action_name %>">
 ```
 
-This is need to keep track of which `controller#action` corresponds to the current request.
+This is required to keep track of which `controller#action` corresponds to the current request.
 
 ## Usage
 
@@ -123,6 +123,8 @@ You can contribute by doing the following:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+To test the application run `bundle install` and then `rake test`. It needs [PhantomJS](http://phantomjs.org/) to be installed.
 
 ## License
 
