@@ -1,11 +1,12 @@
 class MainController
   init: ->
-    $('body').after 'page loaded'
+    @body = document.querySelectorAll('body')[0]
+    @body.insertAdjacentHTML 'afterend', 'page loaded'
 
   home: ->
-    $('body').after 'home content'
+    @body.insertAdjacentHTML 'afterend', 'home content'
 
   dashboard: ->
-    $('body').after 'dashboard content'
+    @body.insertAdjacentHTML 'afterend', 'dashboard content'
 
 setController 'main', new MainController()

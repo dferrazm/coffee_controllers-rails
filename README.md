@@ -23,8 +23,6 @@ Or install it yourself as:
 
 It depends of [coffee-rails](https://github.com/rails/coffee-rails) that is also going to be installed.
 
-The gem also depends of `jQuery` to work properly. Either use [jquery-rails](https://github.com/rails/jquery-rails) or add it by yourself.
-
 ## Setup
 
 In your `application.js` file, add:
