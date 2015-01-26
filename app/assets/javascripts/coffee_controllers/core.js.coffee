@@ -2,21 +2,8 @@
 @Controllers ?= {}
 @ActiveController = null
 
-# Attach a function to be executed when the DOM is loaded
-ready = (fn) ->
-  unless document.readyState is "loading"
-    fn()
-  else
-    document.addEventListener "DOMContentLoaded", fn
-  return
-
-ready ->
-  # Run the specific scripts that have to be run after the DOM is loaded
-  runSpecificActionScript()
-  return
-
 # Call the script function related to the current action of the current controller
-@runSpecificActionScript = ->
+@runCoffeeController = ->
   body = document.querySelectorAll('body')[0]
   currentController = body.getAttribute 'data-controller'
 
