@@ -28,7 +28,7 @@ It depends of [coffee-rails](https://github.com/rails/coffee-rails) that is also
 In your `application.js` file, add:
 
 ```javascript
-//= require coffee_controllers/main
+//= require coffee_controllers/all
 ```
 
 In your views layout file, say `application.html.erb`, add this to the `body` tag:
