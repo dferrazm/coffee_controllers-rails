@@ -26,6 +26,8 @@
 # Store a given controller object by its name in the @Controllers
 @setController = (controllerName, controllerObj) ->
   @Controllers[controllerName] = controllerObj
+  ready ->
+    runCoffeeController() if isCurrentController(controllerName) && controllerObj != getCurrentController()
   return
 
 # Get a given controller object by its name from the @Controllers
@@ -35,3 +37,8 @@
 # Get the current active controller object
 @getCurrentController = ->
   @ActiveController
+
+# Check if a given controller is the current by name
+@isCurrentController = (controllerName) ->
+  body = document.querySelectorAll('body')[0]
+  return body.getAttribute('data-controller').replace(/\//g, '_') == controllerName

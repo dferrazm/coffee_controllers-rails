@@ -17,5 +17,12 @@ class IntegrationTest < ActionDispatch::IntegrationTest
     assert page.has_content?('page loaded'), 'should run the init() function when dashboard is ready'
     assert page.has_content?('dashboard content'), 'should run the dashboard() function when dashboard is ready'
     assert !page.has_content?('home content'), 'should not run the home() function when dashboard is ready'
+
+    visit '/deferred'
+    assert !page.has_content?('deferred page loaded'), 'should not run init() function when deferred is ready'
+    assert !page.has_content?('deferred index content'), 'should not run index() function when deferred is ready'
+    sleep 1
+    assert page.has_content?('deferred page loaded'), 'should run index() function when deferred controller is set'
+    assert page.has_content?('deferred index content'), 'should run index() function when deferred controller is set'
   end
 end
