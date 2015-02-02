@@ -112,8 +112,8 @@ class HomeController
 
 ## Todo
 
-- Lacking JS tests
-- Get rid of the `setController`step
+- Lacking some JS tests
+- Get rid of the `setController` step
 
 ## Contributing
 
