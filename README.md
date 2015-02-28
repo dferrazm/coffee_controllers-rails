@@ -110,6 +110,11 @@ class HomeController
 
 [jerodsanto.net](http://jerodsanto.net/2012/02/a-simple-pattern-to-namespace-and-selectively-execute-certain-bits-of-javascript-depending-on-which-rails-controller-and-action-are-active/)
 
+## Todo
+
+- Lacking some JS tests
+- Get rid of the `setController` step
+
 ## Contributing
 
 Questions or problems? Please post them on the [issue tracker](https://github.com/imaboldcompany/coffee_controllers-rails/issues).
