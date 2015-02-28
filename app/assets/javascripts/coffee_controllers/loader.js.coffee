@@ -1,6 +1,6 @@
 # Attach a function to be executed when the DOM is loaded
 ready = (fn) ->
-  unless document.readyState is "loading"
+  if document.readyState is "complete"
     fn()
   else
     document.addEventListener "DOMContentLoaded", fn
