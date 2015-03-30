@@ -15,7 +15,7 @@
     # set the current active controller script, based on the current controller set previously
     @ActiveController = getController controller
 
-    if @ActiveController != undefined
+    if @ActiveController?
       # call the init function (if any)
       @ActiveController.init() if typeof @ActiveController.init is 'function'
       # call the function related to the current action (if any)
@@ -23,14 +23,20 @@
 
   return
 
-# Store a given controller object by its name in the @Controllers
-@setController = (controllerName, controllerObj) ->
-  @Controllers[controllerName] = controllerObj
-  return
-
-# Get a given controller object by its name from the @Controllers
+# Eval and instantiate a given controller object by its name
 @getController = (controllerName) ->
-  @Controllers[controllerName]
+  # camelize controller name
+  words = controllerName.split /_|\s+/
+  array = []
+  for word in words
+    array.push word.charAt(0).toUpperCase() + word.toLowerCase().slice(1)
+  controllerCamelized = array.join ''
+  # try to eval the controller and instantiate
+  try
+    controller = eval "#{controllerCamelized}Controller"
+    return new controller()
+  catch
+    return null
 
 # Get the current active controller object
 @getCurrentController = ->

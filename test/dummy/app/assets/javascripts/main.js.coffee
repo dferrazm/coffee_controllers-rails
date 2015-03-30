@@ -1,4 +1,4 @@
-class MainController
+@MainController = class MainController
   init: ->
     @body = document.querySelectorAll('body')[0]
     @body.insertAdjacentHTML 'afterend', 'page loaded'
@@ -8,5 +8,3 @@ class MainController
 
   dashboard: ->
     @body.insertAdjacentHTML 'afterend', 'dashboard content'
-
-setController 'main', new MainController()

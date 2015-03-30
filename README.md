@@ -58,36 +58,26 @@ You can add a `home.js.coffee` file with:
 ```coffeescript
 # app/assets/javascripts/home.js.coffee
 
-class HomeController
+@HomeController = class HomeController
   index: ->
     alert 'Hello, world!'
-
-setController 'home', new HomeController()
 ```
 
 So, for every request to the `index` action, as soon as the DOM is ready, the `index` function will be ran, displaying the `alert`.
 
 ### Remind
 
-For every coffee controller defined, you need to attach it through the `setController` function.
-
-```coffeescript
-# setController controllerName, controllerObject
-
-setController 'foo', new FooController()
-```
-
-The `controllerName` has to be the name of the controller underscored. For example:
+The controller's class name MUST be the same name of the rails controller counterpart. For example:
 
 ```coffeescript
 # class FooController < ApplicationController
-setController 'foo', new FooController()
+@FooController = class FooController
 
 # class FooBarController < ApplicationController
-setController 'foo_bar', new FooBarController()
+@FooBarController = class FooBarController
 
 # class Foo::BarHomeController < ApplicationController
-setController 'foo_bar_home', new FooBarHomeController()
+@FooBarHomeController = class FooBarHomeController
 ```
 
 ### Init
@@ -95,7 +85,7 @@ setController 'foo_bar_home', new FooBarHomeController()
 You can define a `init` function to your coffee controllers that is going to be executed before every action function. For example:
 
 ```coffeescript
-class HomeController
+@HomeController = class HomeController
   init: ->
     alert 'initializing...'
 
@@ -113,7 +103,6 @@ class HomeController
 ## Todo
 
 - Lacking some JS tests
-- Get rid of the `setController` step
 
 ## Contributing
 
