@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    coffee_controllers-rails (1.0.1)
+    coffee_controllers-rails (2.0.0)
       coffee-rails
 
 GEM
