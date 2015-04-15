@@ -104,7 +104,7 @@ You can define a `init` function to your coffee controllers that is going to be 
 
 ## Contributing
 
-Questions or problems? Please post them on the [issue tracker](https://github.com/imaboldcompany/coffee_controllers-rails/issues).
+Questions or problems? Please post them on the [issue tracker](https://github.com/dferrazm/coffee_controllers-rails/issues).
 
 You can contribute by doing the following:
 
