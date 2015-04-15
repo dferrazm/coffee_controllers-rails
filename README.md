@@ -1,7 +1,5 @@
 # CoffeeControllers::Rails
 
-By [Ima Bold](http://imabold.com).
-
 With CoffeeControllers, you can define your [CoffeeScript](http://coffeescript.org/) scripts that are going to be ran specifically to the action being executed at the current request.
 So your scripts are better organized following convention over configuration.
 
