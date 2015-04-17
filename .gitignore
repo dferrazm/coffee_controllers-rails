@@ -2,3 +2,6 @@ pkg
 
 test/dummy/tmp
 test/dummy/log/*.log
+
+.ruby-gemset
+.ruby-version
