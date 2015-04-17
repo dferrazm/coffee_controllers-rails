@@ -98,10 +98,6 @@ You can define a `init` function to your coffee controllers that is going to be 
 
 [jerodsanto.net](http://jerodsanto.net/2012/02/a-simple-pattern-to-namespace-and-selectively-execute-certain-bits-of-javascript-depending-on-which-rails-controller-and-action-are-active/)
 
-## Todo
-
-- Lacking some JS tests
-
 ## Contributing
 
 Questions or problems? Please post them on the [issue tracker](https://github.com/dferrazm/coffee_controllers-rails/issues).
@@ -114,7 +110,9 @@ You can contribute by doing the following:
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-To test the application run `bundle install` and then `rake test`. It needs [PhantomJS](http://phantomjs.org/) to be installed.
+To test the application run `bundle install` and then `rake test`. This will run the integration tests. To run the javascript unit tests, `rake teaspoon`.
+
+It needs [PhantomJS](http://phantomjs.org/) to be installed.
 
 ## License
 

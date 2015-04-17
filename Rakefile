@@ -24,3 +24,10 @@ Rake::TestTask.new(:test) do |t|
   t.pattern = 'test/**/*_test.rb'
   t.verbose = false
 end
+
+# Load the dummy app's rake tasks
+APP_RAKEFILE = File.expand_path("../test/dummy/Rakefile", __FILE__)
+load "rails/tasks/engine.rake"
+
+desc "Run the javascript specs"
+task :teaspoon => "app:teaspoon"

@@ -8,12 +8,10 @@
   currentController = body.getAttribute 'data-controller'
 
   if currentController
-    # hold the current controller coming from the body tag
-    controller = currentController.replace /\//g, '_'
     # hold the current action coming from the body tag
     action = body.getAttribute 'data-action'
     # set the current active controller script, based on the current controller set previously
-    @ActiveController = getController controller
+    @ActiveController = getController currentController
 
     if @ActiveController?
       # call the init function (if any)
@@ -24,7 +22,9 @@
   return
 
 # Eval and instantiate a given controller object by its name
-@getController = (controllerName) ->
+@getController = (controller) ->
+  # replace / with _
+  controllerName = controller.replace /\//g, '_'
   # camelize controller name
   words = controllerName.split /_|\s+/
   array = []
