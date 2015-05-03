@@ -14,11 +14,12 @@ RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
+# Install gem helper tasks, like :build, :release, etc
 Bundler::GemHelper.install_tasks
 
+# Run tests for minitest
 require 'rake/testtask'
-
-Rake::TestTask.new(:test) do |t|
+Rake::TestTask.new(:minitest) do |t|
   t.libs << 'lib'
   t.libs << 'test'
   t.pattern = 'test/**/*_test.rb'
@@ -31,3 +32,6 @@ load "rails/tasks/engine.rake"
 
 desc "Run the javascript specs"
 task :teaspoon => "app:teaspoon"
+
+desc "Run all the test suite"
+task :test_suite => [:teaspoon, :minitest]
