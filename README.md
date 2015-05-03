@@ -110,7 +110,7 @@ You can contribute by doing the following:
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-To test the application run `bundle install` and then `rake test`. This will run the integration tests. To run the javascript unit tests, `rake teaspoon`.
+To test the application run `bundle install` and then `rake test_suite`.
 
 It needs [PhantomJS](http://phantomjs.org/) to be installed.
 
